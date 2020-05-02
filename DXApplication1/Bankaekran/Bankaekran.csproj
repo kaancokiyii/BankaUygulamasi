@@ -1,0 +1,280 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B0EA6F23-1038-42CE-A29D-051B83FFB8E8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bankaekran</RootNamespace>
+    <AssemblyName>Bankaekran</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\..\..\Kaan Dosyalar\Yüz Tanıma Sistemi\face_recognition\bin\Debug\bunifu\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v19.2" />
+    <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v19.2" />
+    <Reference Include="DevExpress.ExpressApp.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Persistent.Base.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.TreeMap.v19.2.Core, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v19.2" />
+    <Reference Include="DevExpress.Utils.v19.2.UI, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v19.2" />
+    <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.UI, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.Wizard, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v19.2" />
+    <Reference Include="DevExpress.XtraLayout.v19.2" />
+    <Reference Include="DevExpress.Printing.v19.2.Core" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeMap.v19.2, Version=19.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Anaekran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Anaekran.Designer.cs">
+      <DependentUpon>Anaekran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bankadbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bankadbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bankadbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bankadbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bankadbDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bankadbDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BankaVerilerDataGrid.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BankaVerilerDataGrid.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Dataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Dataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SampleData.cs" />
+    <Compile Include="hesabım.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hesabım.Designer.cs">
+      <DependentUpon>hesabım.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HesapAdiDataset.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HesapAdiDataset.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Kullanici.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kullanici.Designer.cs">
+      <DependentUpon>Kullanici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Para.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Para.Designer.cs">
+      <DependentUpon>Para.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sqlbaglanti.cs" />
+    <Compile Include="Transfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transfer.Designer.cs">
+      <DependentUpon>Transfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GroupDetailPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\GroupDetailPage.Designer.cs">
+      <DependentUpon>GroupDetailPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ItemDetailPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ItemDetailPage.Designer.cs">
+      <DependentUpon>ItemDetailPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\GroupItemDetailPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\GroupItemDetailPage.Designer.cs">
+      <DependentUpon>GroupItemDetailPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Anaekran.resx">
+      <DependentUpon>Anaekran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hesabım.resx">
+      <DependentUpon>hesabım.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kullanici.resx">
+      <DependentUpon>Kullanici.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Para.resx">
+      <DependentUpon>Para.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Transfer.resx">
+      <DependentUpon>Transfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GroupDetailPage.resx">
+      <DependentUpon>GroupDetailPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ItemDetailPage.resx">
+      <DependentUpon>ItemDetailPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\GroupItemDetailPage.resx">
+      <DependentUpon>GroupItemDetailPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bankadbDataSet.xsc">
+      <DependentUpon>bankadbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bankadbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bankadbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bankadbDataSet.xss">
+      <DependentUpon>bankadbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="bankadbDataSet1.xsc">
+      <DependentUpon>bankadbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bankadbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bankadbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bankadbDataSet1.xss">
+      <DependentUpon>bankadbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bankadbDataSet2.xsc">
+      <DependentUpon>bankadbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="bankadbDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bankadbDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bankadbDataSet2.xss">
+      <DependentUpon>bankadbDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="BankaVerilerDataGrid.xsc">
+      <DependentUpon>BankaVerilerDataGrid.xsd</DependentUpon>
+    </None>
+    <None Include="BankaVerilerDataGrid.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BankaVerilerDataGrid.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BankaVerilerDataGrid.xss">
+      <DependentUpon>BankaVerilerDataGrid.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset.xsc">
+      <DependentUpon>Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="Dataset.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Dataset.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Dataset.xss">
+      <DependentUpon>Dataset.xsd</DependentUpon>
+    </None>
+    <None Include="HesapAdiDataset.xsc">
+      <DependentUpon>HesapAdiDataset.xsd</DependentUpon>
+    </None>
+    <None Include="HesapAdiDataset.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HesapAdiDataset.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HesapAdiDataset.xss">
+      <DependentUpon>HesapAdiDataset.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\DarkGray.png" />
+    <EmbeddedResource Include="Assets\LightGray.png" />
+    <EmbeddedResource Include="Assets\MediumGray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
